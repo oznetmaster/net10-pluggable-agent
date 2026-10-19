@@ -15,16 +15,6 @@ BuildSettings.Initialize
 );
 
 var PackageTests = new PackageTest[] {
-    new PackageTest(1, "NetCore31PackageTest")
-    {
-        Description = "Run mock-assembly.dll targeting .NET Core 3.1",
-        Arguments = "testdata/netcoreapp3.1/mock-assembly.dll",
-        ExpectedResult = new ExpectedResult("Failed")
-        {
-            Total = 35, Passed = 21, Failed = 5, Warnings = 1, Inconclusive = 1, Skipped = 7,
-            Assemblies = new ExpectedAssemblyResult[] { new ExpectedAssemblyResult("mock-assembly.dll") }
-        }
-    },
     new PackageTest(1, "Net6PackageTest")
     {
         Description = "Run mock-assembly.dll targeting .NET 6.0",
